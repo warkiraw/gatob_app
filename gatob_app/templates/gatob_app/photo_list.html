@@ -1,0 +1,19 @@
+<!-- gatob_app/templates/gatob_app/photo_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <ul>
+        {% for photo in photos %}
+            <li>
+                <h2>{{ photo.title }}</h2>
+                <img src="{{ photo.image.url }}" alt="{{ photo.title }}" width="200">
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
